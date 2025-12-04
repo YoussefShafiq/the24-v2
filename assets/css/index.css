@@ -1,0 +1,38 @@
+    /* Smooth transitions for summary and FAQ */
+    #summary-content {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #summary-content:not(.hidden) {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* FAQ accordion smooth animation */
+    .faq-answer {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    /* Active FAQ item styling */
+    .faq-question.bg-gray-50 {
+        background-color: #f9fafb;
+    }
+
+    /* Summary list styling */
+    #summary-content ul li {
+        margin-bottom: 0.75rem;
+        padding-right: 1rem;
+        position: relative;
+    }
+
+    #summary-content ul li:before {
+        content: "•";
+        position: absolute;
+        right: 0;
+        color: #ff6c37;
+        font-size: 1.5em;
+        line-height: 0.8;
+    }
