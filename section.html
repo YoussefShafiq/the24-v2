@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the 24 hour</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <div class="h-20 bg-gray-900 flex justify-around items-center">
+        <div class="flex items-center gap-5">
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div class="text-white text-5xl font-extrabold">24</div>
+        <div class="flex items-center gap-5">
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav id="navbar" dir="rtl" class="h-14 bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <!-- Main Navbar -->
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto h-full">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <div class="h-8">
+                    <img src="./assets/images/logo.png" class="h-full object-cover" alt="Logo">
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-2 space-x-reverse">
+                <a href="#home"
+                    class="nav-link px-4 py-2 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-100 hover:text-primary-600 active">
+                    الرئيسية
+                </a>
+
+                <a href="#about"
+                    class="nav-link px-4 py-2 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-100 hover:text-primary-600">
+                    من نحن
+                </a>
+
+                <a href="#services"
+                    class="nav-link px-4 py-2 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-100 hover:text-primary-600">
+                    الخدمات
+                </a>
+
+                <a href="#portfolio"
+                    class="nav-link px-4 py-2 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-100 hover:text-primary-600">
+                    أعمالنا
+                </a>
+
+                <a href="#contact"
+                    class="nav-link px-4 py-2 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-100 hover:text-primary-600">
+                    تواصل معنا
+                </a>
+            </div>
+
+            <!-- Search (Desktop) -->
+            <div class="hidden md:flex items-center">
+                <input type="text" placeholder="بحث..."
+                    class="px-3 py-2 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring focus:ring-primary-200/50 transition">
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-primary-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-6 py-4 space-y-1">
+
+                <a href="#home"
+                    class="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary-600 active">
+                    الرئيسية
+                </a>
+
+                <a href="#about"
+                    class="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary-600">
+                    من نحن
+                </a>
+
+                <a href="#services"
+                    class="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary-600">
+                    الخدمات
+                </a>
+
+                <a href="#portfolio"
+                    class="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary-600">
+                    أعمالنا
+                </a>
+
+                <a href="#contact"
+                    class="mobile-nav-link block py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-primary-600">
+                    تواصل معنا
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- page -->
+    <div class="flex">
+        <!-- desctop ad -->
+        <div class="w-[100px] h-[calc(100vh-56px)] hidden lg:block bg-primary-500 sticky top-14"></div>
+
+        <!-- content -->
+        <div class="flex-1 flex flex-col lg:flex-row">
+            <!-- middle -->
+            <div class="order-0 lg:order-2 lg:w-3/4 p-5">
+                <!-- breedcrumb -->
+                <nav class="flex items-center text-gray-600 text-sm gap-2 py-3" dir="rtl">
+
+                    <a href="/" class="hover:text-primary-600 transition">الرئيسية</a>
+
+                    <span class="text-gray-400">›</span>
+
+                    <a href="/category/politics" class="text-primary-600 transition">سياسة</a>
+
+                </nav>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Item 1 -->
+                    <div class="flex flex-col space-x-reverse space-x-3">
+                        <div class="w-full relative">
+                            <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                            <!-- category icon -->
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full h-12 aspect-square bg-primary-500/80 text-white flex justify-center items-center">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-reverse space-x-2">
+                                <span
+                                    class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                            </div>
+
+                            <a href="./singleNew.html"
+                                class="font-bold text-xl text-gray-900 hover:text-primary-600 cursor-pointer">
+                                الأزمة المالية في إلينوي قد تشل الولاية بالكامل
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col space-x-reverse space-x-3">
+                        <div class="w-full relative">
+                            <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                            <!-- category icon -->
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full h-12 aspect-square bg-primary-500/80 text-white flex justify-center items-center">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-reverse space-x-2">
+                                <span
+                                    class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                            </div>
+
+                            <a href="./singleNew.html"
+                                class="font-bold text-xl text-gray-900 hover:text-primary-600 cursor-pointer">
+                                الأزمة المالية في إلينوي قد تشل الولاية بالكامل
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col space-x-reverse space-x-3">
+                        <div class="w-full relative">
+                            <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-reverse space-x-2">
+                                <span
+                                    class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                            </div>
+
+                            <a href="./singleNew.html"
+                                class="font-bold text-xl text-gray-900 hover:text-primary-600 cursor-pointer">
+                                رؤساء البلديات يتفقون: يجب دعم الإسكان الميسر
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Item 5 -->
+                    <div class="flex flex-col space-x-reverse space-x-3">
+                        <div class="w-full relative">
+                            <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-reverse space-x-2">
+                                <span
+                                    class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                            </div>
+
+                            <a href="./singleNew.html"
+                                class="font-bold text-xl text-gray-900 hover:text-primary-600 cursor-pointer">
+                                الأزمة المالية في إلينوي قد تشل الولاية بالكامل
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="flex flex-col space-x-reverse space-x-3">
+                        <div class="w-full relative">
+                            <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-reverse space-x-2">
+                                <span
+                                    class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                            </div>
+
+                            <a href="./singleNew.html"
+                                class="font-bold text-xl text-gray-900 hover:text-primary-600 cursor-pointer">
+                                رؤساء البلديات يتفقون: يجب دعم الإسكان الميسر
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- left -->
+            <div class="order-3 hidden lg:block lg:w-1/4">
+                <div id="leftsticky" class="p-6 lg:ps-0 sticky">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
+                        <span class="text-primary-600"> آخر الأخبار</span>
+                    </h3>
+
+                    <div class="space-y-5">
+                        <!-- Item 1 -->
+                        <div class="flex space-x-reverse space-x-3">
+                            <div class="w-52 min-h-[120px] relative">
+                                <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+
+                                <!-- category icon -->
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full h-12 aspect-square bg-primary-500/80 text-white flex justify-center items-center">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+
+
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-reverse space-x-2">
+                                    <span
+                                        class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                    <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                                </div>
+
+                                <a href="./singleNew.html"
+                                    class="font-bold text-gray-900 hover:text-primary-600 cursor-pointer">
+                                    الأزمة المالية في إلينوي قد تشل الولاية بالكامل
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex space-x-reverse space-x-3">
+                            <div class="w-52 min-h-[120px] relative">
+                                <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                                <!-- category icon -->
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full h-12 aspect-square bg-primary-500/80 text-white flex justify-center items-center">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div class="flex items-center space-x-reverse space-x-2">
+                                    <span
+                                        class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                    <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                                </div>
+
+                                <a href="./singleNew.html"
+                                    class="font-bold text-gray-900 hover:text-primary-600 cursor-pointer">
+                                    الأزمة المالية في إلينوي قد تشل الولاية بالكامل
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex space-x-reverse space-x-3">
+                            <div class="w-52 min-h-[120px]">
+                                <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-reverse space-x-2">
+                                    <span
+                                        class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
+                                    <span class="text-xs text-gray-500">منذ 6 سنوات</span>
+                                </div>
+
+                                <a href="./singleNew.html"
+                                    class="font-bold text-gray-900 hover:text-primary-600 cursor-pointer">
+                                    الأزمة المالية في إلينوي قد تشل الولاية بالكامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- desctop ad -->
+        <div class="w-[100px] h-[calc(100vh-56px)] hidden lg:block bg-primary-500 sticky top-14"></div>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

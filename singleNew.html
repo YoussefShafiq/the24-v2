@@ -17,28 +17,28 @@
 
 <body class="bg-gray-50 min-h-screen font-sans">
 
-    <nav id="navbar" dir="rtl" class="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
-        <div class="h-20 bg-gray-900 flex justify-around items-center">
-            <div class="flex items-center gap-5">
-                <a href="www.facebook.com" class="text-white text-2xl block">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="www.facebook.com" class="text-white text-2xl block">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            <div class="text-white text-5xl font-extrabold">24</div>
-            <div class="flex items-center gap-5">
-                <a href="www.facebook.com" class="text-white text-2xl block">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="www.facebook.com" class="text-white text-2xl block">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div>
+    <div class="h-20 bg-gray-900 flex justify-around items-center">
+        <div class="flex items-center gap-5">
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
+        <div class="text-white text-5xl font-extrabold">24</div>
+        <div class="flex items-center gap-5">
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="www.facebook.com" class="text-white text-2xl block">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <nav id="navbar" dir="rtl" class="h-14 bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
         <!-- Main Navbar -->
-        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto h-full">
 
             <!-- Logo -->
             <div class="flex items-center space-x-2 space-x-reverse">
@@ -364,7 +364,8 @@
             <div class="lg:col-span-1">
 
                 <!-- Trending -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8 lg:sticky top-40">
+                <div id="articleTrendingSticky"
+                    class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8 lg:sticky top-14">
                     <h3 class="text-xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
                         <span class="text-primary-600">الأكثر تداولًا</span>
                     </h3>

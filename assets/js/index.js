@@ -3,16 +3,16 @@ tailwind.config = {
         extend: {
             colors: {
                 primary: {
-                    50: '#fff4f1',
-                    100: '#ffe8e3',
-                    200: '#ffd5cc',
-                    300: '#ffb9a5',
-                    400: '#ff9173',
-                    500: '#ff6c37',  // Your primary color
-                    600: '#e65521',
-                    700: '#c24418',
-                    800: '#9f3b19',
-                    900: '#81351b',
+                    50: '#fff1f1ff',
+                    100: '#ffe3e3ff',
+                    200: '#ffccccff',
+                    300: '#ffa5a5ff',
+                    400: '#ff7373ff',
+                    500: '#ff3737ff',  // Your primary color
+                    600: '#e62121ff',
+                    700: '#c21818ff',
+                    800: '#9f1919ff',
+                    900: '#811b1bff',
                 }
             },
         }
@@ -23,45 +23,37 @@ tailwind.config = {
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+let isMobileMenuOpen = false;
 
 // Mobile Menu Toggle
-mobileMenuButton.addEventListener('click', function () {
+mobileMenuButton.addEventListener('click', function (e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+
     if (mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.remove('hidden');
         mobileMenu.classList.add('block');
         mobileMenuButton.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+        isMobileMenuOpen = true;
     } else {
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('block');
         mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+        isMobileMenuOpen = false;
     }
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', function (e) {
-    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+    // Check if click is outside mobile menu and button
+    const isClickInsideMenu = mobileMenu.contains(e.target);
+    const isClickOnButton = mobileMenuButton.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickOnButton && isMobileMenuOpen) {
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('block');
         mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+        isMobileMenuOpen = false;
     }
-});
-
-// Active nav link handling
-navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-        if (this.getAttribute('href').startsWith('#')) {
-            e.preventDefault();
-        }
-
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-
-        // Close mobile menu if open
-        if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
-        }
-    });
 });
 
 // Summary Toggle Functionality
@@ -139,31 +131,47 @@ document.querySelectorAll('.faq-answer').forEach(answer => {
     answer.style.transition = 'max-height 0.3s ease-out';
 });
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
 
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+
+window.onload = function () {
+    handleSticky();
+};
+
+function handleSticky() {
+    // right sticky handle
+    if (document.getElementById('rightsticky')) {
+        const rightsticky = document.getElementById('rightsticky');
+        let rightstickyHeight = rightsticky.clientHeight;
+        console.log(rightstickyHeight, window.innerHeight);
+
+        let rightstickyTop = rightstickyHeight - window.innerHeight;
+        let rightTopValue = 0;
+
+        if (rightstickyHeight > window.innerHeight - 56) {
+            rightTopValue = rightstickyTop;
+            rightsticky.style.top = `-${rightTopValue}px`;
+        } else {
+            rightTopValue = 56;
+            rightsticky.style.top = `56px`;
         }
-    });
-});
+    }
 
-// Add hover effect to social buttons
-document.querySelectorAll('footer a, .social-button').forEach(button => {
-    button.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-2px)';
-        this.style.transition = 'transform 0.2s ease';
-    });
+    // left sticky handle
+    if (document.getElementById('leftsticky')) {
+        const leftsticky = document.getElementById('leftsticky');
+        let leftstickyHeight = leftsticky.clientHeight;
+        console.log(leftstickyHeight, window.innerHeight);
 
-    button.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0)';
-    });
-});
+        let leftstickyTop = leftstickyHeight - window.innerHeight;
+        let leftTopValue = 0;
+
+        if (leftstickyHeight > window.innerHeight - 56) {
+            leftTopValue = leftstickyTop;
+            leftsticky.style.top = `-${leftTopValue}px`;
+        } else {
+            leftTopValue = 56;
+            leftsticky.style.top = `56px`;
+        }
+    }
+
+}
