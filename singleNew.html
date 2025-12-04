@@ -17,7 +17,26 @@
 
 <body class="bg-gray-50 min-h-screen font-sans">
 
-    <nav id="navbar" dir="rtl" class="bg-white/90 backdrop-blur-md shadow-md mb-10 sticky top-0 z-50">
+    <nav id="navbar" dir="rtl" class="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="h-20 bg-gray-900 flex justify-around items-center">
+            <div class="flex items-center gap-5">
+                <a href="www.facebook.com" class="text-white text-2xl block">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="www.facebook.com" class="text-white text-2xl block">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="text-white text-5xl font-extrabold">24</div>
+            <div class="flex items-center gap-5">
+                <a href="www.facebook.com" class="text-white text-2xl block">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="www.facebook.com" class="text-white text-2xl block">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
         <!-- Main Navbar -->
         <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
 
@@ -104,54 +123,75 @@
     <!-- MAIN CONTENT -->
     <main class="container mx-auto px-4 py-8">
 
-        <!-- Article Header -->
-        <div class="mb-8">
+        <!-- breedcrumb -->
+        <nav class="flex items-center text-gray-600 text-sm gap-2 py-3" dir="rtl">
 
-            <div class="flex items-center space-x-reverse space-x-2 text-sm text-gray-600 mb-4">
-                <span class="font-medium text-primary-600">سياسه</span>
-            </div>
+            <a href="/" class="hover:text-primary-600 transition">الرئيسية</a>
 
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                الأزمة المالية في ولاية إلينوي قد تؤدي لتوقف الولاية بالكامل
-            </h1>
+            <span class="text-gray-400">›</span>
 
-            <p class="text-xl text-gray-700 mb-8">
-                تواجه ولاية إلينوي أزمة مالية خانقة تهدد بتعطيل الخدمات العامة وإيقاف حركة الدولة بشكل كامل خلال الفترة
-                المقبلة.
-            </p>
+            <a href="/category/politics" class="hover:text-primary-600 transition">سياسة</a>
 
-            <div class="flex items-center justify-between border-b border-gray-200 pb-6">
+            <span class="text-gray-400">›</span>
 
-                <div class="flex items-center space-x-reverse space-x-4">
-                    <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                        <i class="fas fa-user text-gray-600"></i>
-                    </div>
-                    <div>
-                        <p class="text-gray-900 font-medium"> اليوم السابع</p>
-                    </div>
-                </div>
+            <span class="text-primary-600 font-semibold">اسم الخبر</span>
 
-                <div class="flex space-x-reverse space-x-4">
-                    <button class="text-gray-600 hover:text-primary-600"><i class="fab fa-twitter text-xl"></i></button>
-                    <button class="text-gray-600 hover:text-primary-600"><i
-                            class="fab fa-facebook text-xl"></i></button>
-                    <button class="text-gray-600 hover:text-primary-600"><i class="fas fa-link text-xl"></i></button>
-                </div>
-
-            </div>
-
-        </div>
+        </nav>
 
         <!-- ARTICLE BODY + SIDEBAR -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             <!-- MAIN ARTICLE -->
             <div class="lg:col-span-2">
+                <!-- Article Header -->
+                <div class="mb-8">
 
+                    <div class="flex items-center space-x-reverse space-x-2 text-sm text-gray-600 mb-4">
+                        <span class="font-medium text-primary-600 bg-primary-100 px-3 py-1 rounded-lg">سياسه</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        الأزمة المالية في ولاية إلينوي قد تؤدي لتوقف الولاية بالكامل
+                    </h1>
+
+                    <p class="text-xl text-gray-700 mb-8">
+                        تواجه ولاية إلينوي أزمة مالية خانقة تهدد بتعطيل الخدمات العامة وإيقاف حركة الدولة بشكل كامل خلال
+                        الفترة
+                        المقبلة.
+                    </p>
+
+                    <div class="flex items-center justify-between border-b border-gray-200 pb-6 ">
+
+                        <div class="flex items-center space-x-reverse space-x-4">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-gray-600"></i>
+                            </div>
+                            <div>
+                                <a
+                                    class="text-gray-900 font-medium hover:text-primary-600 cursor-pointer transition-colors duration-300">
+                                    اليوم السابع</a>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-reverse space-x-4">
+                            <a
+                                class="text-gray-600 hover:text-primary-600 transition-colors duration-300 cursor-pointer"><i
+                                    class="fab fa-twitter text-xl"></i></a>
+                            <a
+                                class="text-gray-600 hover:text-primary-600 transition-colors duration-300 cursor-pointer"><i
+                                    class="fab fa-facebook text-xl"></i></a>
+                            <a
+                                class="text-gray-600 hover:text-primary-600 transition-colors duration-300 cursor-pointer"><i
+                                    class="fas fa-link text-xl"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
                 <!-- Featured Image -->
                 <div class="mb-8">
                     <div class="bg-gray-300 h-96 rounded-lg flex items-center justify-center mb-4">
-                       <img src="./assets/images/politics.jpg" alt="" class="w-full h-full object-cover">
+                        <img src="./assets/images/politics.jpg" alt="" class="w-full h-full object-cover">
                     </div>
                     <p class="text-gray-600 italic">
                         تكشف الأزمة المالية الحالية حجم المشكلات المتراكمة داخل الولاية.
@@ -164,10 +204,12 @@
                         <span>تلخيص</span>
                         <i class="fa-solid fa-clipboard-list"></i>
                     </button>
+                    <span class="opacity-75 text-sm">بواسطه الذكاء الاصطناعي</span>
 
                     <div id="summary-content"
                         class="mt-4 bg-black text-white rounded-lg p-6 hidden transition-all duration-300">
-                        <h3 class="text-xl font-bold mb-4 border-b border-gray-700 pb-2">ملخص المقال</h3>
+                        <h3 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2">الملخص
+                        </h3>
                         <ul class="space-y-3 list-disc pr-4">
                             <li>تواجه ولاية إلينوي أزمة مالية خطيرة تهدد بتوقف الخدمات العامة الأساسية</li>
                             <li>الأزمة نتجت عن سنوات من الديون المتراكمة وسوء الإدارة المالية</li>
@@ -236,9 +278,9 @@
                 </div>
                 <!-- FAQs Accordion Section -->
                 <div class="mt-16 bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6">أسئلة متكررة </h2>
-
-                    <div class="space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900">أسئلة متكررة </h2>
+                    <span class="opacity-75 text-sm">بواسطه الذكاء الاصطناعي</span>
+                    <div class="mt-5 space-y-4">
                         <!-- FAQ Item 1 -->
                         <div class="faq-item bg-white rounded-lg border border-gray-200 overflow-hidden">
                             <button
@@ -300,33 +342,50 @@
                         </div>
                     </div>
                 </div>
+                <!-- tags -->
+                <div class="flex flex-wrap gap-3 py-5">
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">سياسة</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">اقتصاد</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">رياضة</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">فن</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">تكنولوجيا</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">تعليم</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">حوادث</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">صحة</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">عالم</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">محافظات</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">ثقافة</div>
+                    <div class="px-3 py-1 bg-gray-200 rounded-lg">برلمان</div>
+                </div>
+
             </div>
 
             <!-- SIDEBAR -->
             <div class="lg:col-span-1">
 
                 <!-- Trending -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8 lg:sticky top-20">
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8 lg:sticky top-40">
                     <h3 class="text-xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-200">
-                        <span class="text-primary-600">الأكثر تداولًا</span> | فيديوهات
+                        <span class="text-primary-600">الأكثر تداولًا</span>
                     </h3>
 
                     <div class="space-y-6">
 
                         <!-- Item 1 -->
                         <div class="pb-6 border-b border-gray-100">
-                            <div class="flex items-start space-x-reverse space-x-3">
-                                <div class="w-4 h-4 mt-1 bg-primary-500 rounded-full"></div>
-
+                            <div class="flex space-x-reverse space-x-3">
+                                <div class="w-52">
+                                    <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                                </div>
                                 <div>
                                     <div class="flex items-center space-x-reverse space-x-2 mb-2">
                                         <span
-                                            class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">تقنية</span>
+                                            class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">الاهرام</span>
                                         <span class="text-xs text-gray-500">منذ 6 سنوات</span>
                                     </div>
 
                                     <h4 class="font-bold text-gray-900 hover:text-primary-600 cursor-pointer">
-                                        المدير التنفيذي لجوجل يكشف خطط الهواتف المستقبلية
+                                        الأزمة المالية في إلينوي قد تشل الولاية بالكامل
                                     </h4>
                                 </div>
                             </div>
@@ -334,9 +393,10 @@
 
                         <!-- Item 2 -->
                         <div class="pb-6 border-b border-gray-100">
-                            <div class="flex items-start space-x-reverse space-x-3">
-                                <div class="w-4 h-4 mt-1 bg-primary-500 rounded-full"></div>
-
+                            <div class="flex space-x-reverse space-x-3">
+                                <div class="w-52">
+                                    <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                                </div>
                                 <div>
                                     <div class="flex items-center space-x-reverse space-x-2 mb-2">
                                         <span
@@ -353,9 +413,10 @@
 
                         <!-- Item 3 -->
                         <div class="pb-6 border-b border-gray-100">
-                            <div class="flex items-start space-x-reverse space-x-3">
-                                <div class="w-4 h-4 mt-1 bg-primary-500 rounded-full"></div>
-
+                            <div class="flex space-x-reverse space-x-3">
+                                <div class="w-52">
+                                    <img src="./assets/images/politics.jpg" class="h-full w-full object-cover" alt="">
+                                </div>
                                 <div>
                                     <div class="flex items-center space-x-reverse space-x-2 mb-2">
                                         <span
